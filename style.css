@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins','sans-serif';
+
+}
+
+:root{
+    --bg-color:#1b222f;
+    --second-bg-color:#343b47;
+    --text-color:#fff;
+    --main-color:rgb(199, 13, 224);
+}
+
+html{
+    font-size: 62.5%;
+    overflow: Auto; 
+}
+
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header .sticky{
+    border-bottom: .1rem solid rgba(42, 40, 40, 0.2);
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.logo:hover{
+    color: rgb(191, 0, 255);
+    text-shadow:1px 1px 1px rgb(224, 76, 13);
+
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color:var(--text-color);
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img{
+    width: 30vw;
+    filter: drop-shadow(0.30rem 0.30rem 0.8rem rgb(60, 186, 233));
+    pointer-events: none;
+    
+}
+
+.home-content h3{
+ font-size: 3.2rem;
+ font-weight: 700;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px; /* Adjust spacing between icons */
+  }
+
+  .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem; /* Consistent width */
+    height: 4rem; /* Consistent height */
+    background: transparent; /* Background color */
+    border: .2rem solid var(--main-color); /* Border style */
+    border-radius: 50%; /* Circular shape */
+    font-size: 2rem; /* Font size for icons */
+    color: var(--main-color); /* Color for icons */
+    transition: .5s ease; /* Transition for hover effect */
+  }
+
+  .social-media a:hover {
+    background: var(--main-color); /* Background color on hover */
+    color: var(--second-bg-color); /* Color for icons on hover */
+    box-shadow: 0 0 1rem var(--main-color); /* Shadow effect */
+  }
+
+  .social-icon {
+    width: 24px; /* Uniform size for logos */
+    height: 24px; /* Uniform size for logos */
+  }
+
+  /* Maintain icon size consistency */
+  .social-media a img {
+    width: 100%; /* Image takes full width */
+    height: 100%; /* Image takes full height */
+  }
+
+  /* Optionally, you can add hover effects */
+  .social-media a:hover .social-icon {
+    filter: brightness(1.2); /* Brighten images on hover */
+  }
+
+
+.btn{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+.about-img{
+    width: 35vw;  
+    pointer-events: none;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 2rem;
+    margin: 2rem  0  3rem;
+}
+
+.skill h2{
+    margin-bottom: 5rem;
+}
+.skill-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-container .skill-box {
+    flex: 2  2  45rem;
+    background: var(--second-bg-color);
+    padding: 1.5rem 1rem 1.5rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+.skill-container .skill-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+.heading {
+    margin: 2rem 0 3rem;
+}
+
+.skill-box h3{
+    font-size: 2rem;
+}
+.skill-box p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0 1.5rem;
+}
+
+
+.Project {
+    background: var(--second-bg-color);
+    padding: 50px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 36px;
+    margin-bottom: 4rem;
+}
+
+.heading span {
+    color: #9400ce;
+}
+
+.achievements {
+    background: var(--second-bg-color);
+    padding: 50px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 36px;
+    margin-bottom: 4rem;
+}
+
+.heading span {
+    color: #9400ce;
+}
+
+.achievement-container {
+    display: grid; /* Using grid to create a two-column layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 2.5rem; /* Space between the boxes */
+    margin: 0 auto; /* Center the grid within the container */
+}
+
+.achievement-box {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    padding: 1.5rem; /* Add padding for inner spacing */
+    margin-bottom: 2rem; /* Add bottom margin for space between rows */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Add transition for hover effect */
+    border: 2px solid transparent; /* Set a transparent border for the default state */
+}
+
+.achievement-box:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    border-color: var(--main-color);
+}
+.badges-image {
+    width: 400px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and content */
+}
+
+.achievement-content {
+    text-align:start; /* Align text to the left within the box */
+}
+
+.achievement-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: rgb(60, 186, 233);
+}
+
+.achievement-content p {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Optional styling for the list items */
+.achievement-content ul {
+    list-style-type: disc; /* Style the list with bullets */
+    padding-left: 1.5rem; /* Add some padding for list items */
+}
+
+.Project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.Project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+}
+
+/* Target the last .Project-box and make it span two columns */
+.Project-box:last-child {
+    grid-column: span 2;
+    justify-self: center; /* Center horizontally */
+    width: 50%; /* Adjust the width as needed */
+}
+
+.Project-box a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    text-decoration: none;
+    color: inherit;
+}
+
+.Project-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.Project-box:hover img {
+    transform: scale(1.1);
+}
+
+.Project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(249, 9, 197, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.Project-box:hover .Project-layer {
+    transform: translateY(0);
+}
+
+.Project-layer h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.Project-layer p {
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+    color: var(--text-color);
+}
+
+.Project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    pointer-events: auto;
+}
+
+.Project-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+.Contact h2 {
+  margin-bottom: 3rem; 
+    
+    
+}
+
+.Contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Contact form .input-box input,
+.Contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size:1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.Contact form .input-box input {
+    width:49%;
+}
+
+.Contact form textarea {
+    resize:none;
+}
+.Contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem  var(--main-color);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+.notification-box {
+    display: none; /* Initially hidden */
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center; /* Center the text */
+}
+
+.notification-box.success {
+    background-color: #4CAF50; /* Green background for success */
+}
+
+.notification-box.error {
+    background-color: #f44336; /* Red background for error */
+}
+
+.confirmation-message {
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to center */
+    background-color:#343b47; /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 20px; /* Padding around the content */
+    z-index: 1000; /* Ensure it's above other content */
+    display: none; /* Hidden by default */
+    text-align: center; /* Center text */
+}
+
+.message-text {
+    margin-top: 1rem; /* Spacing between animation and text */
+    color: #4CAF50; /* Green color for the message text */
+    font-size: 1.5rem; /* Font size adjustment */
+}
+
+
+
+/* Keyframes for the tick move animation */
+@keyframes tickMove {
+    0% {
+        transform: translateY(-10px); /* Start slightly above */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 1; /* Become visible */
+    }
+    100% {
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Fade-in effect for the confirmation message */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+
+
+
+/* BREAKPOINTS */
+@media (max-width: 952px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 1300px){
+    .header{
+       padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3%  2ren ;
+    }
+    .skill{
+        padding-bottom: 7rem;
+    }
+    .Project{
+        padding-bottom: 7rem;
+    }
+    .Contact{
+        padding-bottom: auto;
+    }
+    .footer {
+        padding: 2rem  3%;
+    }
+}
+
+@media (max-width: 900px){
+    #menu-icon{
+        display:block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0  .5rem  1rem rgba(0,0,0,.2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin: top 4rem; 
+        pointer-events: none;
+    }
+    .about{
+        flex-direction: column-reverse;
+
+    }
+    .about-img{
+        width: 70vw;
+        margin-top: 4rem;
+        pointer-events: none;
+    }
+    .Skill h2{
+      margin-bottom: 3rem;
+    }
+    .Project h2{
+        margin-bottom: 3rem;
+
+    }
+    .Project-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+ 
+@media (max-width: 800px){
+    .Project-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width : 800px){
+    html{
+        font-size: 50%;
+    }
+    .Contact form.input-box input {
+        width: 100%;
+    }
+
+}
+
+
